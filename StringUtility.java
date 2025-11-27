@@ -36,6 +36,32 @@ public class StringUtility {
     }
 
     /**
+     * Converts a string to title case (first letter of each word capitalized)
+     * @param str the string to convert
+     * @return the string in title case
+     */
+    public static String toTitleCase(String str) {
+        if (str == null || str.isEmpty()) {
+            return str;
+        }
+        StringBuilder result = new StringBuilder();
+        boolean capitalizeNext = true;
+
+        for (char c : str.toCharArray()) {
+            if (Character.isWhitespace(c)) {
+                capitalizeNext = true;
+                result.append(c);
+            } else if (capitalizeNext) {
+                result.append(Character.toUpperCase(c));
+                capitalizeNext = false;
+            } else {
+                result.append(Character.toLowerCase(c));
+            }
+        }
+        return result.toString();
+    }
+
+    /**
      * Main method to demonstrate the utility functions
      */
     public static void main(String[] args) {
@@ -46,5 +72,10 @@ public class StringUtility {
 
         // Test countVowels function
         System.out.println("\nVowel count in '" + testString + "': " + countVowels(testString));
+
+        // Test title case converter
+        String mixedCase = "hello WORLD from JAVA";
+        System.out.println("\nOriginal: " + mixedCase);
+        System.out.println("Title Case: " + toTitleCase(mixedCase));
     }
 }
