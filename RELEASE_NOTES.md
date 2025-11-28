@@ -1,5 +1,25 @@
 # Release Notes
 
+## Version 1.1 - Documentation Update
+
+**Release Date:** 2025-11-28
+
+### Changes
+
+- Updated README.md with complete documentation for all features
+- Added usage examples for palindrome checker and title case converter
+- Improved documentation clarity and completeness
+
+### Bug Fixes
+
+- None
+
+### Notes
+
+This is a minor release focusing on documentation improvements. All features from v1.0 remain unchanged and fully functional.
+
+---
+
 ## Version 1.0 - Initial Release
 
 **Release Date:** 2025-11-28

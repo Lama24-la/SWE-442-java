@@ -14,6 +14,8 @@ The StringUtility tool currently provides the following functionality:
 
 - **String Reversal**: Reverses any given string
 - **Vowel Counter**: Counts the number of vowels in a string
+- **Palindrome Checker**: Checks if a string is a palindrome (ignores spaces and case)
+- **Title Case Converter**: Converts strings to title case format
 
 ## How to Use
 
@@ -39,6 +41,14 @@ String reversed = StringUtility.reverse("Hello World");
 // Count vowels
 int vowelCount = StringUtility.countVowels("Hello World");
 // Output: 3
+
+// Check palindrome
+boolean isPalin = StringUtility.isPalindrome("racecar");
+// Output: true
+
+// Convert to title case
+String title = StringUtility.toTitleCase("hello world");
+// Output: "Hello World"
 ```
 
 ## Project Information
