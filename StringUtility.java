@@ -58,7 +58,10 @@ public class StringUtility {
                 result.append(Character.toLowerCase(c));
             }
         }
-        return result.toString();}
+        return result.toString();
+    }
+
+    /**
      * Checks if a string is a palindrome (reads the same forwards and backwards)
      * @param str the string to check
      * @return true if the string is a palindrome, false otherwise
