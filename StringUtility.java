@@ -58,7 +58,19 @@ public class StringUtility {
                 result.append(Character.toLowerCase(c));
             }
         }
-        return result.toString();
+        return result.toString();}
+     * Checks if a string is a palindrome (reads the same forwards and backwards)
+     * @param str the string to check
+     * @return true if the string is a palindrome, false otherwise
+     */
+    public static boolean isPalindrome(String str) {
+        if (str == null || str.isEmpty()) {
+            return true;
+        }
+        // Remove spaces and convert to lowercase for comparison
+        String cleaned = str.replaceAll("\\s+", "").toLowerCase();
+        String reversed = new StringBuilder(cleaned).reverse().toString();
+        return cleaned.equals(reversed);
     }
 
     /**
@@ -77,5 +89,12 @@ public class StringUtility {
         String mixedCase = "hello WORLD from JAVA";
         System.out.println("\nOriginal: " + mixedCase);
         System.out.println("Title Case: " + toTitleCase(mixedCase));
+        // Test palindrome checker
+        String palindrome1 = "racecar";
+        String palindrome2 = "A man a plan a canal Panama";
+        String notPalindrome = "Hello";
+        System.out.println("\n'" + palindrome1 + "' is palindrome: " + isPalindrome(palindrome1));
+        System.out.println("'" + palindrome2 + "' is palindrome: " + isPalindrome(palindrome2));
+        System.out.println("'" + notPalindrome + "' is palindrome: " + isPalindrome(notPalindrome));
     }
 }
